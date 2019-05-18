@@ -15,8 +15,8 @@ public class smartWait {
         WebElement button2 = wait.until(ExpectedConditions.elementToBeClickable(By.id("btn1")));
         button2.click();
 
-        //WebElement button = driver.findElement(By.id("btn1"));    //this is the original implementation .
+        WebElement button = driver.findElement(By.id("btn1"));    //this is the original implementation .
 
-        button.click();
+        //button.click();
     }
 }
