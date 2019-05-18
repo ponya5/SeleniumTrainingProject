@@ -1,19 +1,16 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.sql.Driver;
-
 public class MatificSchoolLogin {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        WebDriverWait wait = new WebDriverWait(driver,60);  //fluent wait
-        driver.get("https://www.matific.com"); // go to matific home
+        WebDriverWait wait = new WebDriverWait(driver, 60);  //fluent wait
+        driver.get("https://www.matific.com");                              // go to matific home
         WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href*='/isr/he/login-page/")));
         loginButton.click();
         WebElement UsernameField = wait.until(ExpectedConditions.elementToBeClickable(By.id("username-input")));
